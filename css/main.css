@@ -52,9 +52,9 @@ img {
 /* Utility Classes */
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 3rem; /* 48px padding desktop */
 }
 
 .text-center { text-align: center; }
@@ -118,7 +118,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 76px;
 }
 
 .logo {
@@ -135,7 +135,7 @@ header {
 .site-logo {
     display: block;
     width: auto;
-    height: 52px;
+    height: 48px;
     object-fit: contain;
 }
 
@@ -265,7 +265,7 @@ header {
 
 .topic-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 1rem;
 }
 
@@ -357,14 +357,24 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Hero Split Layout */
 .hero-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
     padding: 2.5rem 0;
-    min-height: 450px;
+    min-height: 430px;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(520px, 1.08fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-visual img {
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  display: block;
+  margin-inline: auto;
 }
 
 .laptop-composite {
@@ -434,3 +444,5 @@ input:focus, textarea:focus, select:focus {
     border-color: var(--brand-primary);
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
+. t o p i c - g r i d - 3 x 2   {   g r i d - t e m p l a t e - c o l u m n s :   r e p e a t ( 3 ,   m i n m a x ( 0 ,   1 f r ) )   ! i m p o r t a n t ;   }  
+ 

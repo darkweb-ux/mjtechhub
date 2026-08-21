@@ -59,4 +59,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    
+    // Set active class based on current URL
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const allLinks = document.querySelectorAll('.nav-link');
+    allLinks.forEach(link => {
+        if (link.getAttribute('data-page') === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
 });
